@@ -9,15 +9,21 @@
 }
 
 .active{
-  @apply font-extrabold tracking-wide text-white transition-colors duration-100 hover:text-purple-500
+  @apply font-extrabold tracking-wide text-white transition-colors duration-100
 }
 
-.gradient-color{
+.bg-gradient{
   background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)
 }
 
+.text-gradient{
+  background: linear-gradient(to right, #2370f5, #8119aa); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-/* for lazyloading images */
+
+/* for lazy-loading */
 .LazyLoad {
   opacity: 0;
   transition: all 1s ease-in-out;
