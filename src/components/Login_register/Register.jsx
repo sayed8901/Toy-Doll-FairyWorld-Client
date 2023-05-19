@@ -140,11 +140,11 @@ const Register = () => {
           {/* based on handleToggle function, dynamically change the button text.. */}
           <span className="w-10 text-2xl" onClick={handleToggle}>
             {showPassword ? (
-              <span title="Click to hide password">
+              <span className="tooltip tooltip-primary" data-tip="Click to hide password">
                 <FaEyeSlash />
               </span>
             ) : (
-              <span title="Click to show password">
+              <span className="tooltip tooltip-primary" data-tip="Click to show password">
                 <FaEye />
               </span>
             )}
