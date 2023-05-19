@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../AuthContext/AuthProvider";
+import { AuthContext } from "../../AuthContext/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
@@ -84,8 +84,9 @@ const Register = () => {
   return (
     <form
       onSubmit={handleRegister}
-      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto -mt-6"
+      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto"
     >
+      <h2 className="text-2xl font-bold text-center text-gradient mb-2">Register Now!</h2>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Name</span>
@@ -155,7 +156,7 @@ const Register = () => {
       </div>
 
       {/* link to go to log in form */}
-      <small className="mt-3 text-center">
+      <small className="mt-2 text-center">
         Already have an account?{" "}
         <Link to={"/login"} className="btn btn-sm btn-outline">
           Login Now

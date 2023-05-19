@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { AuthContext } from "../AuthContext/AuthProvider";
+import logo from "../../assets/logo.png";
+import { AuthContext } from "../../AuthContext/AuthProvider";
 import { useContext } from "react";
 import LazyLoad from "react-lazy-load";
 
@@ -39,7 +39,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar my-container bg-base-100 h-24 mb-4">
+    <div className="navbar my-container bg-base-100 h-24 mb-2 sticky top-0 z-10">
       <div className="navbar-start">
         {/* dropdown navbar for small display */}
         <div className="dropdown">
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="relative">
             <img className="absolute inset-0" src={logo} alt="" />
             <br />
-            <h2 className="mt-4 text-2xl px-4 font-bold text-gradient">
+            <h2 className="mt-1 sm:mt-4 text-base sm:text-2xl px-1 font-bold text-gradient">
               Doll_FairyWorld
             </h2>
           </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
       {/* to dynamically show user photo & name */}
       <div className="navbar-end">
       {user ? (
-          <div className="flex gap-4 justify-center items-center">
+          <div className="flex gap-2 justify-center items-center">
             <div
               className="tooltip tooltip-bottom tooltip-primary"
               data-tip={user.displayName}
@@ -99,13 +99,13 @@ const Navbar = () => {
                 />
               </LazyLoad>
             </div>
-            <button onClick={logOut} className="btn btn-primary w-24">
+            <button onClick={logOut} className="btn btn-sm btn-primary h-10">
               Log out
             </button>
           </div>
         ) : (
           <button>
-            <Link to={"/login"} className="btn btn-primary w-24">
+            <Link to={"/login"} className="btn btn-sm btn-primary h-10">
               log in
             </Link>
           </button>

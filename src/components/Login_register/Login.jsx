@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../AuthContext/AuthProvider";
+import { AuthContext } from "../../AuthContext/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -102,8 +102,9 @@ const Login = () => {
   return (
     <form
       onSubmit={handleLogin}
-      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto -mt-6"
+      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto"
     >
+      <h2 className="text-2xl font-bold text-center text-gradient mb-2">Log in Now!</h2>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Email</span>
@@ -133,11 +134,11 @@ const Login = () => {
           {/* based on handleToggle function, dynamically change the button text.. */}
           <span className="w-10 text-2xl" onClick={handleToggle}>
             {showPassword ? (
-              <span title="Click to hide password">
+              <span className="tooltip tooltip-primary" data-tip="Click to hide password">
                 <FaEyeSlash />
               </span>
             ) : (
-              <span title="Click to show password">
+              <span className="tooltip tooltip-primary" data-tip="Click to show password">
                 <FaEye />
               </span>
             )}
@@ -150,7 +151,7 @@ const Login = () => {
       </div>
 
       {/* link to go to registration form */}
-      <small className="mt-3 text-center">
+      <small className="mt-2 text-center">
         New to this site?{" "}
         <Link to={"/register"} className="btn btn-sm btn-outline">
           Resister Now
@@ -165,7 +166,7 @@ const Login = () => {
             className="grid flex-grow card rounded-box place-items-center"
           >
             {/* Google log in btn */}
-            <div onClick={handleGoogleLogIn} className="gap-2 btn btn-active">
+            <div onClick={handleGoogleLogIn} className="gap-1 btn btn-active">
               <span>
                 <img
                   className="w-6"
@@ -181,7 +182,7 @@ const Login = () => {
             className="grid flex-grow card rounded-box place-items-center"
           >
             {/* GitHub log in btn */}
-            <div onClick={handleGitHubLogIn} className="gap-2 btn btn-active">
+            <div onClick={handleGitHubLogIn} className="gap-1 btn btn-active">
               <span>
                 <img
                   className="w-6"

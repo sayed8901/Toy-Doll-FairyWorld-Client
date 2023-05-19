@@ -6,9 +6,10 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Layout from './Layout/Layout.jsx';
-import Login from './components/login';
-import Register from './components/Register';
+import Login from './components/Login_register/Login';
+import Register from './components/Login_register/Register';
 import AuthProvider from './AuthContext/AuthProvider';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       }
-    ]
+    ],
   },
+  {
+    path: '*',
+    element: <ErrorPage></ErrorPage>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
