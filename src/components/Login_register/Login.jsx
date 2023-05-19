@@ -23,7 +23,7 @@ const Login = () => {
   const location = useLocation();
   // console.log(location);
   const fromLocation = location.state?.from?.pathname || "/";
-  // console.log(fromLocation);
+  console.log(fromLocation);
 
   const handleLogin = (e) => {
     setErrorMsg("");
@@ -102,7 +102,7 @@ const Login = () => {
   return (
     <form
       onSubmit={handleLogin}
-      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto"
+      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mx-auto"
     >
       <h2 className="text-2xl font-bold text-center text-gradient mb-2">Log in Now!</h2>
       <div className="form-control">
@@ -166,7 +166,7 @@ const Login = () => {
             className="grid flex-grow card rounded-box place-items-center"
           >
             {/* Google log in btn */}
-            <div onClick={handleGoogleLogIn} className="gap-1 btn btn-active">
+            <div onClick={handleGoogleLogIn} className="gap-4 btn btn-active">
               <span>
                 <img
                   className="w-6"
@@ -182,7 +182,7 @@ const Login = () => {
             className="grid flex-grow card rounded-box place-items-center"
           >
             {/* GitHub log in btn */}
-            <div onClick={handleGitHubLogIn} className="gap-1 btn btn-active">
+            <div onClick={handleGitHubLogIn} className="gap-4 btn btn-active">
               <span>
                 <img
                   className="w-6"

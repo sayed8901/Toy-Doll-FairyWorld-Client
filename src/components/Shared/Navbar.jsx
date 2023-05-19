@@ -5,36 +5,60 @@ import { useContext } from "react";
 import LazyLoad from "react-lazy-load";
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
-    //   console.log(user);
+  const { user, logOut } = useContext(AuthContext);
+  //   console.log(user);
 
   const navItems = (
     <>
       <li>
         <NavLink
           to="/"
-          className={`my-5 lg:my-0 mx-2 ${({ isActive }) => (isActive ? "active" : "")}`}
+          className={`my-5 lg:my-0 mx-1 ${({ isActive }) =>
+            isActive ? "active" : ""}`}
         >
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/login"
-          className={`mb-5 lg:mb-0 mx-2 ${({ isActive }) => (isActive ? "active" : "")}`}
+          to="/all-toys"
+          className={`mb-5 lg:mb-0 mx-1 ${({ isActive }) =>
+            isActive ? "active" : ""}`}
         >
-          login
+          All Toys
         </NavLink>
       </li>
+      {/* {user && ( */}
+        <>
+          <li>
+            <NavLink
+              to="/my-toys"
+              className={`mb-5 lg:mb-0 mx-1 ${({ isActive }) =>
+                isActive ? "active" : ""}`}
+            >
+              My Toys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/add-toy"
+              className={`mb-5 lg:mb-0 mx-1 ${({ isActive }) =>
+                isActive ? "active" : ""}`}
+            >
+              Add a Toy
+            </NavLink>
+          </li>
+        </>
+      {/* )} */}
       <li>
         <NavLink
-          to="/register"
-          className={`mb-5 lg:mb-0 mx-2 ${({ isActive }) => (isActive ? "active" : "")}`}
+          to="/blogs"
+          className={`mb-3 lg:mb-0 mx-1 ${({ isActive }) =>
+            isActive ? "active" : ""}`}
         >
-          register
+          Blogs
         </NavLink>
       </li>
-
     </>
   );
 
@@ -80,23 +104,19 @@ const Navbar = () => {
 
       {/* wide navbar for large display */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal ml-20 px-1">{navItems}</ul>
+        <ul className="menu menu-horizontal ml-8 px-1">{navItems}</ul>
       </div>
 
       {/* to dynamically show user photo & name */}
       <div className="navbar-end">
-      {user ? (
+        {user ? (
           <div className="flex gap-2 justify-center items-center">
             <div
               className="tooltip tooltip-bottom tooltip-primary"
               data-tip={user.displayName}
             >
               <LazyLoad>
-                <img
-                  className="rounded-full w-12"
-                  src={user.photoURL}
-                  alt=""
-                />
+                <img className="rounded-full w-12" src={user.photoURL} alt="" />
               </LazyLoad>
             </div>
             <button onClick={logOut} className="btn btn-sm btn-primary h-10">

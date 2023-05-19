@@ -84,7 +84,7 @@ const Register = () => {
   return (
     <form
       onSubmit={handleRegister}
-      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto"
+      className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mx-auto"
     >
       <h2 className="text-2xl font-bold text-center text-gradient mb-2">Register Now!</h2>
       <div className="form-control">

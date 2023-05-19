@@ -1,10 +1,43 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext/AuthProvider";
+import { Navigate, useLocation } from "react-router-dom";
+import { FidgetSpinner } from "react-loader-spinner";
 
-const PrivateRoute = () => {
+const PrivateRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+
+  const location = useLocation();
+
+  if (loading) {
     return (
-        <div>
-            
-        </div>
+      <div
+        className="hero min-h-screen"
+        style={{ minHeight: `calc(100vh - 14em)` }}
+      >
+        <FidgetSpinner
+          visible={true}
+          height="120"
+          width="120"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+          ballColors={["#ff0000", "#00ff00", "#0000ff"]}
+          backgroundColor="#F4442E"
+        />
+      </div>
     );
+  }
+  if (user) {
+    return children;
+  } else {
+    return (
+      <Navigate
+        to={"/login"}
+        state={{ from: location }}
+        replace={true}
+      ></Navigate>
+    );
+  }
 };
 
 export default PrivateRoute;
