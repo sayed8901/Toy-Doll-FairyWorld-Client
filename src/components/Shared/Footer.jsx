@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="grid grid-cols-3 my-container items-center justify-between gap-6 sm:gap-12 text-center bg-base-100 sticky top-[100vh]">
       <div className="items-center">
-        <img className="mx-auto w-full mx-auto" src={logo} alt="" />
+        <img className="mx-auto w-full" src={logo} alt="" />
         <Link
           to={"/"}
           className="mx-auto normal-case text-base md:text-2xl lg:text-3xl font-bold text-gradient"
