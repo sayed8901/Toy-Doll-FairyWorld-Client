@@ -4,8 +4,8 @@ const BannerSlider = () => {
       <div className="hero">
         <div className="hero-content text-center">
           <div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-center text-gradient mt-16 mb-8">
-              Welcome to Fairy World!
+            <h2 className="text-2xl lg:text-3xl font-bold text-center mt-16 mb-8">
+              Welcome to <span className="text-gradient">Fairy World!</span>
             </h2>
             <p className="py-6">
               Here you can find most lovely toys of your dream. Welcome to the

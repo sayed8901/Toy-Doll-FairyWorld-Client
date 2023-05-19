@@ -119,13 +119,13 @@ const Navbar = () => {
                 <img className="rounded-full w-12" src={user.photoURL} alt="" />
               </LazyLoad>
             </div>
-            <button onClick={logOut} className="btn btn-sm btn-primary h-10">
+            <button onClick={logOut} className="btn btn-sm btn-primary h-10 bg-gradient">
               Log out
             </button>
           </div>
         ) : (
           <button>
-            <Link to={"/login"} className="btn btn-sm btn-primary h-10">
+            <Link to={"/login"} className="btn btn-sm btn-primary h-10 bg-gradient">
               log in
             </Link>
           </button>

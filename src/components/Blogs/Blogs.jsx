@@ -2,8 +2,8 @@ const Blogs = () => {
   return (
     <div className="mb-8 px-4">
       <div className="text-center my-4">
-        <h1 className="text-4xl font-bold text-center my-10 text-gradient">
-          Welcome to my blog!
+        <h1 className="text-4xl font-bold text-center my-10">
+          Welcome to my <span className="text-gradient">blog</span>
         </h1>
 
         <h2 className="text-2xl font-bold text-center mb-8">

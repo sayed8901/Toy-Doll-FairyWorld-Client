@@ -5,7 +5,7 @@
 
 /* custom css library building using @apply for reusing purpose */
 .my-container{
-  @apply mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4  md:px-24 lg:px-8
+  @apply mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8
 }
 
 .active{
@@ -13,7 +13,7 @@
 }
 
 .bg-gradient{
-  background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)
+  background: linear-gradient(90deg, #23bdf5 0%, #a90ae8 100%)
 }
 
 .text-gradient{
@@ -21,7 +21,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 
 

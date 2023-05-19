@@ -6,7 +6,8 @@ const Gallery = () => {
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {
-    fetch("toys.json")
+    // fetch("toys.json")
+    fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => setToysData(data));
   }, []);
@@ -15,8 +16,8 @@ const Gallery = () => {
 
   return (
     <div className="my-16">
-      <h2 className="text-2xl lg:text-3xl font-bold text-center text-gradient mb-8">
-    Our Exclusive Doll Collection
+      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8">
+        Our Exclusive <span className="text-gradient">Doll Gallery</span>
       </h2>
 
       <Marquee speed={220} pauseOnHover={true}>
