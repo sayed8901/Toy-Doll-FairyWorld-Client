@@ -5,7 +5,7 @@
 
 /* custom css library building using @apply for reusing purpose */
 .my-container{
-  @apply mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4  md:px-24 lg:px-8 lg:py-4
+  @apply mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4  md:px-24 lg:px-8
 }
 
 .active{

@@ -63,7 +63,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 h-24 mb-2 sticky top-0 z-10">
+    <div className="navbar bg-base-100 h-24 sticky top-0 z-10">
       <div className="navbar-start">
         {/* dropdown navbar for small display */}
         <div className="dropdown">

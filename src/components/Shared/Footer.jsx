@@ -4,7 +4,7 @@ import { FaLinkedin, FaFacebook, FaGoogleDrive } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-3 items-center justify-between gap-6 sm:gap-12 text-center bg-base-100 sticky top-[100vh]">
+    <footer className="grid grid-cols-3 items-center justify-between gap-6 sm:gap-12 text-center bg-base-100 sticky top-[100vh] pb-4">
       <Link to={"/blogs"}>
         <div className="items-center">
           <img className="mx-auto w-full" src={logo} alt="" />
