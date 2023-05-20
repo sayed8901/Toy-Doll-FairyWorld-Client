@@ -11,6 +11,7 @@ import AddToy from "../Toys/AddToy";
 import Blogs from "../Blogs/Blogs";
 import PrivateRoute from "./PrivateRoute";
 import SingleToyDetailsCard from "../Toys/SingleToyDetailsCard";
+import AnimatedSection from "../AOS-Animate/AnimatedSection";
 
 const router = createBrowserRouter([
   {
@@ -23,31 +24,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: <AnimatedSection><Login></Login></AnimatedSection>,
       },
       {
         path: "/register",
-        element: <Register></Register>,
+        element: <AnimatedSection><Register></Register></AnimatedSection>,
       },
       {
         path: '/all-toys',
-        element: <AllToys></AllToys>
+        element: <AnimatedSection><AllToys></AllToys></AnimatedSection>
       },
       {
         path: '/toy/:id',
-        element: <PrivateRoute><SingleToyDetailsCard></SingleToyDetailsCard></PrivateRoute>
+        element: <PrivateRoute><AnimatedSection><SingleToyDetailsCard></SingleToyDetailsCard></AnimatedSection></PrivateRoute>
       },
       {
         path: '/my-toys',
-        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+        element: <PrivateRoute><AnimatedSection><MyToys></MyToys></AnimatedSection></PrivateRoute>
       },
       {
         path: '/add-toy',
-        element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
+        element: <PrivateRoute><AnimatedSection><AddToy></AddToy></AnimatedSection></PrivateRoute>
       },
       {
         path: '/blogs',
-        element: <Blogs></Blogs>
+        element: <AnimatedSection><Blogs></Blogs></AnimatedSection>
       },
     ],
   },
