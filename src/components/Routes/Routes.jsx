@@ -24,37 +24,75 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <AnimatedSection><Login></Login></AnimatedSection>,
+        element: (
+          <AnimatedSection>
+            <Login></Login>
+          </AnimatedSection>
+        ),
       },
       {
         path: "/register",
-        element: <AnimatedSection><Register></Register></AnimatedSection>,
+        element: (
+          <AnimatedSection>
+            <Register></Register>
+          </AnimatedSection>
+        ),
       },
       {
-        path: '/all-toys',
-        element: <AnimatedSection><AllToys></AllToys></AnimatedSection>
+        path: "/all-toys",
+        element: (
+          <AnimatedSection>
+            <AllToys></AllToys>
+          </AnimatedSection>
+        ),
       },
       {
-        path: '/toy/:id',
-        element: <PrivateRoute><AnimatedSection><SingleToyDetailsCard></SingleToyDetailsCard></AnimatedSection></PrivateRoute>
+        path: "/toy/:id",
+        element: (
+          <PrivateRoute>
+            <AnimatedSection>
+              <SingleToyDetailsCard></SingleToyDetailsCard>
+            </AnimatedSection>
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/my-toys',
-        element: <PrivateRoute><AnimatedSection><MyToys></MyToys></AnimatedSection></PrivateRoute>
+        path: "/my-toys",
+        element: (
+          <PrivateRoute>
+            <AnimatedSection>
+              <MyToys></MyToys>
+            </AnimatedSection>
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/add-toy',
-        element: <PrivateRoute><AnimatedSection><AddToy></AddToy></AnimatedSection></PrivateRoute>
+        path: "/add-toy",
+        element: (
+          <PrivateRoute>
+            <AnimatedSection>
+              <AddToy></AddToy>
+            </AnimatedSection>
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/blogs',
-        element: <AnimatedSection><Blogs></Blogs></AnimatedSection>
+        path: "/blogs",
+        element: (
+          <AnimatedSection>
+            <Blogs></Blogs>
+          </AnimatedSection>
+        ),
       },
     ],
   },
   {
     path: "*",
-    element: <ErrorPage></ErrorPage>,
+    element: (
+      <AnimatedSection>
+        <ErrorPage></ErrorPage>
+      </AnimatedSection>
+    ),
   },
 ]);
 

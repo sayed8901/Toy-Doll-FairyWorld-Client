@@ -1,3 +1,4 @@
+import useTitle from "../../CustomHooks/useTitle";
 import AnimatedSection from "../AOS-Animate/AnimatedSection";
 import BannerSlider from "./BannerSlider";
 import Gallery from "./Gallery";
@@ -5,6 +6,7 @@ import ToyByCategory from "./ToyByCategory";
 
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div>
             <AnimatedSection><BannerSlider></BannerSlider></AnimatedSection>

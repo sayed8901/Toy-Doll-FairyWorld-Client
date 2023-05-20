@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import useTitle from "../../CustomHooks/useTitle";
 
 const AddToy = () => {
+  useTitle('Add a Toy')
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {

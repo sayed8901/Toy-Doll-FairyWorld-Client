@@ -1,4 +1,8 @@
+import useTitle from "../../CustomHooks/useTitle";
+
 const Blogs = () => {
+  useTitle('Blog')
+  
   return (
     <div className="mb-8 px-4">
       <div className="text-center my-4">
