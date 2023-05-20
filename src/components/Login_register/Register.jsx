@@ -2,8 +2,10 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import useTitle from "../../CustomHooks/useTitle";
 
 const Register = () => {
+  useTitle('Registration')
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 

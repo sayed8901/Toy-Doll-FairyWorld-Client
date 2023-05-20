@@ -1,18 +1,20 @@
 import useTitle from "../../CustomHooks/useTitle";
+import AnimatedSection from "../AOS-Animate/AnimatedSection";
 
 const Blogs = () => {
   useTitle('Blog')
-  
+
   return (
     <div className="mb-8 px-4">
+      <AnimatedSection>
       <div className="text-center my-4">
         <h1 className="text-4xl font-bold text-center my-10">
           Welcome to my <span className="text-gradient">blog</span>
         </h1>
 
         <h2 className="text-2xl font-bold text-center mb-8">
-          Some basic concepts about{" "}
-          <span className="text-gradient">server & database</span>
+          Some basic concepts about{" "} <br />
+          <span className="text-3xl text-gradient">server & database</span>
         </h2>
         <h4 className="mb-16">
           Here I am going to discus about some of the basic concepts of node or
@@ -21,17 +23,21 @@ const Blogs = () => {
           access token, refresh token, etc.
         </h4>
       </div>
+      </AnimatedSection>
 
       {/* Q&A part */}
       {/* question # 1 */}
+      <AnimatedSection>
       <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
         <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
           A. What is an access token and refresh token? How do they work and
           where should we store them on the client-side?
         </h3>
       </div>
+      </AnimatedSection>
 
       {/* question # 2 */}
+      <AnimatedSection>
       <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
         <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
           B. Compare SQL and NoSQL databases?
@@ -83,20 +89,25 @@ const Blogs = () => {
           management. So it is considered as an alternate approach.
         </p>
       </div>
+      </AnimatedSection>
 
       {/* question # 3 */}
+      <AnimatedSection>
       <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
         <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
           C. What is express js? What is Nest JS?
         </h3>
       </div>
+      </AnimatedSection>
 
       {/* question # 4 */}
+      <AnimatedSection>
       <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
         <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
           D. What is MongoDB aggregate and how does it work?
         </h3>
       </div>
+      </AnimatedSection>
     </div>
   );
 };

@@ -1,8 +1,11 @@
 import Lottie from "lottie-react";
 import ErrorAnimation from "../../assets/carton-animated-error-page.json";
 import { Link } from "react-router-dom";
+import useTitle from "../../CustomHooks/useTitle";
 
 const ErrorPage = () => {
+  useTitle('Error')
+  
   return (
     <div className="hero min-h-screen">
       <div className="my-container card sm:card-side bg-base-100">

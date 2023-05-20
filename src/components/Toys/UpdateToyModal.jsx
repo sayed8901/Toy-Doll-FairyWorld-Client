@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 
 const UpdateToyModal = ({ toy, myToysData, setMyToysData }) => {
   const toyData = toy;
-  //   console.log(toyData);
+    console.log(toyData);
 
   const handleUpdateToy = (e) => {
     e.preventDefault();

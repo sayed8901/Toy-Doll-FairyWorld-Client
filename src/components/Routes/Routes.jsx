@@ -12,6 +12,7 @@ import Blogs from "../Blogs/Blogs";
 import PrivateRoute from "./PrivateRoute";
 import SingleToyDetailsCard from "../Toys/SingleToyDetailsCard";
 import AnimatedSection from "../AOS-Animate/AnimatedSection";
+import UpdateToy from "../Toys/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
             </AnimatedSection>
           </PrivateRoute>
         ),
+      },
+      {
+        path: '/updateToy/:id',
+        element: <UpdateToy></UpdateToy>
       },
       {
         path: "/blogs",

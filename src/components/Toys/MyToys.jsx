@@ -3,9 +3,11 @@ import { AuthContext } from "../../AuthContext/AuthProvider";
 import UpdateToyModal from "./UpdateToyModal";
 import Swal from "sweetalert2";
 import useTitle from "../../CustomHooks/useTitle";
+import { Link } from "react-router-dom";
+
 
 const MyToys = () => {
-  useTitle('My Toys')
+  useTitle("My Toys");
   const { user } = useContext(AuthContext);
   //   console.log(user.email);
   const [myToysData, setMyToysData] = useState([]);
@@ -17,6 +19,10 @@ const MyToys = () => {
       .then((data) => setMyToysData(data));
   }, [user.email]);
   //   console.log(myToysData);
+
+  const handleUpdate = (toy) => {
+    console.log(toy);
+  };
 
   const handleDelete = (id) => {
     console.log(id);
@@ -83,6 +89,7 @@ const MyToys = () => {
               <th className="text-center">Details</th>
             </tr>
           </thead>
+
           <tbody>
             {/* table row */}
             {myToysData.map((toy, index) => (
@@ -122,11 +129,12 @@ const MyToys = () => {
                 <td className="text-center">{toy?.availableQuantity}</td>
                 <td className="text-center">
                   <div className="flex gap-2">
-                    <UpdateToyModal
+                    {/* <UpdateToyModal
                       toy={toy}
                       myToysData={myToysData}
                       setMyToysData={setMyToysData}
-                    ></UpdateToyModal>
+                    ></UpdateToyModal> */}
+                    <Link to={`/updateToy/${toy?._id}`} className="btn btn-sm bg-gradient">Update</Link>
                     <button
                       onClick={() => {
                         handleDelete(toy._id);
