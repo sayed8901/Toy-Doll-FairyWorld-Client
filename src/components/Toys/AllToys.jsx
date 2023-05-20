@@ -24,14 +24,50 @@ const AllToys = () => {
     }
   };
 
+//   const [searchedToys, setSearchedToys] = useState([]);
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const searchText = event.target.searchText.value;
+    console.log(searchText);
+
+    fetch(`http://localhost:5000/toySearchByToyNameOrCategory/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => setToysData(data))
+
+    event.target.reset();
+  };
+
   return (
     <div>
-      <h2 className="text-2xl lg:text-3xl font-bold text-center my-8">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center my-12">
         Our Exclusive <span className="text-gradient">Doll Gallery</span>
       </h2>
 
+      <form
+        onSubmit={handleSearch}
+        className="form-control w-full max-w-lg mx-auto mt-16 mb-8"
+      >
+        <label className="font-bold text-center text-xl mb-4">
+          Search by toy name or toys catagory
+        </label>
+        <div className="flex gap-4 mx-auto">
+          <input
+            type="text"
+            name="searchText"
+            placeholder="Toy Name or category"
+            className="input input-bordered w-full max-w-lg"
+          />
+          <input
+            className="btn btn-outline bg-gradient text-white font-bold"
+            type="submit"
+            value="Search"
+          />
+        </div>
+      </form>
+
       <div className="overflow-x-auto w-full">
-        <table className="table w-full">
+        <table className="table w-full mt-4 mb-12">
           {/* head */}
           <thead>
             <tr>
@@ -52,8 +88,8 @@ const AllToys = () => {
           <tbody>
             {/* table row */}
             {toysData.map((toy, index) => (
-              <tr key={toy._id}>
-                <td className="text-center">{index + 1}</td>
+              <tr className="hover" key={toy._id}>
+                <th className="text-center">{index + 1}</th>
                 <td>
                   {toy?.sellerName}
                   <br />
@@ -86,7 +122,9 @@ const AllToys = () => {
                     onClick={() => handleSingleToyDetailsView(toy._id)}
                     to={`/toy/${toy._id}`}
                   >
-                    <button className="btn btn-sm btn-primary btn-outline">View Details</button>
+                    <button className="btn btn-sm btn-primary btn-outline">
+                      View Details
+                    </button>
                   </Link>
                 </th>
               </tr>
