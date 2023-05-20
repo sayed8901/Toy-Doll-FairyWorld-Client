@@ -15,8 +15,7 @@ const Register = () => {
   };
 
   // props extracting using AuthContext
-  const { createNewUser, updateUserData } =
-    useContext(AuthContext);
+  const { createNewUser, updateUserData } = useContext(AuthContext);
   //   console.log(createNewUser);
 
   const handleRegister = (e) => {
@@ -65,7 +64,7 @@ const Register = () => {
                 "User profile has been successfully updated.";
               console.log(successMessage);
               setSuccessMsg(successMessage);
-            //   console.log(newUser);
+              //   console.log(newUser);
             })
             .catch((error) => {
               console.log(error.message);
@@ -86,7 +85,9 @@ const Register = () => {
       onSubmit={handleRegister}
       className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mx-auto"
     >
-      <h2 className="text-2xl font-bold text-center text-gradient mb-2">Register Now!</h2>
+      <h2 className="text-3xl font-bold text-center mb-2">
+        <span className="text-gradient">Register</span> Now!
+      </h2>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Name</span>
@@ -104,7 +105,7 @@ const Register = () => {
           <span className="label-text">Photo</span>
         </label>
         <input
-          type="text"
+          type="url"
           name="photo"
           placeholder="Photo_URL"
           className="input input-bordered"
@@ -140,11 +141,17 @@ const Register = () => {
           {/* based on handleToggle function, dynamically change the button text.. */}
           <span className="w-10 text-2xl" onClick={handleToggle}>
             {showPassword ? (
-              <span className="tooltip tooltip-primary" data-tip="Click to hide password">
+              <span
+                className="tooltip tooltip-primary"
+                data-tip="Click to hide password"
+              >
                 <FaEyeSlash />
               </span>
             ) : (
-              <span className="tooltip tooltip-primary" data-tip="Click to show password">
+              <span
+                className="tooltip tooltip-primary"
+                data-tip="Click to show password"
+              >
                 <FaEye />
               </span>
             )}

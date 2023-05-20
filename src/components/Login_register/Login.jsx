@@ -104,7 +104,9 @@ const Login = () => {
       onSubmit={handleLogin}
       className="card-body w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mx-auto"
     >
-      <h2 className="text-2xl font-bold text-center text-gradient mb-2">Log in Now!</h2>
+      <h2 className="text-3xl font-bold text-center mb-2">
+        <span className="text-gradient">Log in</span> Now!
+      </h2>
       <div className="form-control">
         <label className="label">
           <span className="label-text">Email</span>

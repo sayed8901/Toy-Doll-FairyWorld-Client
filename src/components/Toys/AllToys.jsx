@@ -24,7 +24,7 @@ const AllToys = () => {
     }
   };
 
-//   const [searchedToys, setSearchedToys] = useState([]);
+  //   const [searchedToys, setSearchedToys] = useState([]);
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -33,30 +33,32 @@ const AllToys = () => {
 
     fetch(`http://localhost:5000/toySearchByToyNameOrCategory/${searchText}`)
       .then((res) => res.json())
-      .then((data) => setToysData(data))
+      .then((data) => setToysData(data));
 
     event.target.reset();
   };
 
   return (
     <div>
-      <h2 className="text-2xl lg:text-3xl font-bold text-center my-12">
+      {/* <h2 className="text-2xl lg:text-3xl font-bold text-center my-12">
         Our Exclusive <span className="text-gradient">Doll Gallery</span>
-      </h2>
+      </h2> */}
 
       <form
         onSubmit={handleSearch}
-        className="form-control w-full max-w-lg mx-auto mt-16 mb-8"
+        className="form-control w-full max-w-lg mx-auto my-12"
       >
-        <label className="font-bold text-center text-xl mb-4">
-          Search by toy name or toys catagory
+        <label className="text-2xl lg:text-3xl font-bold text-center mb-8">
+          Here you can search by- <br /> <span className="text-gradient">Toy name</span> or{" "}
+          <span className="text-gradient">Toys category</span>
         </label>
         <div className="flex gap-4 mx-auto">
           <input
             type="text"
             name="searchText"
-            placeholder="Toy Name or category"
+            placeholder="Type Toy Name/ Category"
             className="input input-bordered w-full max-w-lg"
+            required
           />
           <input
             className="btn btn-outline bg-gradient text-white font-bold"
