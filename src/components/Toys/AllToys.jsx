@@ -8,7 +8,7 @@ const AllToys = () => {
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://doll-fairyworld-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToysData(data));
   }, []);
@@ -31,7 +31,7 @@ const AllToys = () => {
     const searchText = event.target.searchText.value;
     console.log(searchText);
 
-    fetch(`http://localhost:5000/toySearchByToyNameOrCategory/${searchText}`)
+    fetch(`https://doll-fairyworld-server.vercel.app/toySearchByToyNameOrCategory/${searchText}`)
       .then((res) => res.json())
       .then((data) => setToysData(data));
 
@@ -40,10 +40,6 @@ const AllToys = () => {
 
   return (
     <div>
-      {/* <h2 className="text-2xl lg:text-3xl font-bold text-center my-12">
-        Our Exclusive <span className="text-gradient">Doll Gallery</span>
-      </h2> */}
-
       <form
         onSubmit={handleSearch}
         className="form-control w-full max-w-lg mx-auto my-12"
@@ -119,7 +115,7 @@ const AllToys = () => {
                 </td>
                 <td className="text-center">{toy?.price}</td>
                 <td className="text-center">{toy?.availableQuantity}</td>
-                <th className="text-center">
+                <td className="text-center">
                   <Link
                     onClick={() => handleSingleToyDetailsView(toy._id)}
                     to={`/toy/${toy._id}`}
@@ -128,7 +124,7 @@ const AllToys = () => {
                       View Details
                     </button>
                   </Link>
-                </th>
+                </td>
               </tr>
             ))}
           </tbody>

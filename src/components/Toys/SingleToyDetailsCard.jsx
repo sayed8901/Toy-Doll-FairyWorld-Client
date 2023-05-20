@@ -9,7 +9,7 @@ const SingleToyDetailsCard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toy/${id}`)
+    fetch(`https://doll-fairyworld-server.vercel.app/toy/${id}`)
       .then((res) => res.json())
       .then((data) => setToy(data));
   }, [id]);

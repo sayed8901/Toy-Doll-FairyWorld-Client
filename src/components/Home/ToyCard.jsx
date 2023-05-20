@@ -11,7 +11,7 @@ const ToyCard = ({ category }) => {
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/${category}`)
+    fetch(`https://doll-fairyworld-server.vercel.app/toys/${category}`)
       .then((res) => res.json())
       .then((data) => setToysData(data));
   }, [category]);

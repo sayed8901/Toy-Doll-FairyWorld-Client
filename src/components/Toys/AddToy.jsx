@@ -6,7 +6,7 @@ const AddToy = () => {
     const [toysData, setToysData] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/toys")
+      fetch("https://doll-fairyworld-server.vercel.app/toys")
         .then((res) => res.json())
         .then((data) => setToysData(data));
     }, []);
@@ -40,7 +40,7 @@ const AddToy = () => {
     };
     // console.log(newToy);
 
-    fetch("http://localhost:5000/toys", {
+    fetch("https://doll-fairyworld-server.vercel.app/toys", {
         method: 'POST',
         headers: {
             'content-type': "application/json"

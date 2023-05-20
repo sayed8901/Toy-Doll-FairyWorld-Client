@@ -7,7 +7,7 @@ const Gallery = () => {
 
   useEffect(() => {
     // fetch("toys.json")
-    fetch("http://localhost:5000/toys")
+    fetch("https://doll-fairyworld-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToysData(data));
   }, []);
@@ -16,11 +16,11 @@ const Gallery = () => {
 
   return (
     <div className="my-16">
-      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16">
         Our Exclusive <span className="text-gradient">Doll Gallery</span>
       </h2>
 
-      <Marquee speed={220} pauseOnHover={true}>
+      <Marquee speed={250} pauseOnHover={true}>
         {toysData.map((toy) => (
           <div key={toy._id} className="card glass mr-12">
             <figure>
