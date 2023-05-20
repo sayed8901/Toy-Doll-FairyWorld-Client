@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import UpdateToyModal from "./UpdateToyModal";
 
-
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   //   console.log(user.email);
@@ -18,6 +17,16 @@ const MyToys = () => {
 
   return (
     <div>
+      <div className="w-3/4 mx-auto">
+        <p className="text-2xl lg:text-3xl font-bold text-center my-4 text-gradient">
+          My Toys
+        </p>
+        <p className="text-center mb-8 text-xl">
+          Here is showing the toys that have only being added by the current
+          user
+        </p>
+      </div>
+
       <div className="overflow-x-auto w-full">
         <table className="table w-full mt-4 mb-12">
           {/* head */}
@@ -30,8 +39,9 @@ const MyToys = () => {
                 Price <br />
                 (in BD Tk)
               </th>
+              <th className="text-center">Rating</th>
               <th className="text-center">
-                Available Quantity <br />
+                Available <br /> Quantity <br />
                 (in pcs)
               </th>
               <th className="text-center">Details</th>
@@ -66,16 +76,21 @@ const MyToys = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="mt-2">
+                    <p className="text-sm font-bold">Description:</p>
+                    <p className="text-sm ms-5">{toy?.description}</p>
+                  </div>
                 </td>
                 <td className="text-center">{toy?.price}</td>
+                <td className="text-center">{toy?.rating}</td>
                 <td className="text-center">{toy?.availableQuantity}</td>
                 <td className="text-center">
-                    <div className="flex gap-2">
-                        <UpdateToyModal></UpdateToyModal>
-                    <button className="btn btn-sm btn-error btn-outline">
+                  <div className="flex gap-2">
+                    <UpdateToyModal toy={toy}></UpdateToyModal>
+                    <button className="btn btn-sm btn-error btn-outline font-bold">
                       Delete
                     </button>
-                    </div>
+                  </div>
                 </td>
               </tr>
             ))}

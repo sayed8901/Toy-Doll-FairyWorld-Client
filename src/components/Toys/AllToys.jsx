@@ -44,10 +44,11 @@ const AllToys = () => {
         onSubmit={handleSearch}
         className="form-control w-full max-w-lg mx-auto my-12"
       >
-        <label className="text-2xl lg:text-3xl font-bold text-center mb-8">
+        <div className="text-2xl lg:text-3xl font-bold text-center mb-8">
           Here you can search by- <br /> <span className="text-gradient">Toy name</span> or{" "}
           <span className="text-gradient">Toys category</span>
-        </label>
+        </div>
+
         <div className="flex gap-4 mx-auto">
           <input
             type="text"

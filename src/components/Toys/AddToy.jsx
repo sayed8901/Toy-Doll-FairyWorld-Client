@@ -143,7 +143,7 @@ const AddToy = () => {
               <span className="label-text">Photo</span>
             </label>
             <input
-              type="text"
+              type="url"
               name="picture"
               placeholder="Photo_URL"
               className="input input-bordered"
@@ -154,11 +154,11 @@ const AddToy = () => {
             <label className="label">
               <span className="label-text">Product Details</span>
             </label>
-            <input
+            <textarea
               type="text"
               name="description"
               placeholder="Detail Description"
-              className="input input-bordered"
+              className="input input-bordered textarea h-24"
               required
             />
           </div>
