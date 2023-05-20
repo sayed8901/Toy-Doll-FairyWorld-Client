@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import UpdateToyModal from "./UpdateToyModal";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -14,6 +15,39 @@ const MyToys = () => {
       .then((data) => setMyToysData(data));
   }, [user.email]);
   //   console.log(myToysData);
+
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://doll-fairyworld-server.vercel.app/toys/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("Successfully deleted", data);
+            if (data.deletedCount > 0) {
+              Swal.fire(
+                "Deleted!",
+                "Toy data has been successfully removed.",
+                "success"
+              );
+
+              const remaining = myToysData.filter((toy) => toy._id !== id);
+              setMyToysData(remaining);
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div>
@@ -91,7 +125,12 @@ const MyToys = () => {
                       myToysData={myToysData}
                       setMyToysData={setMyToysData}
                     ></UpdateToyModal>
-                    <button className="btn btn-sm btn-error btn-outline font-bold">
+                    <button
+                      onClick={() => {
+                        handleDelete(toy._id);
+                      }}
+                      className="btn btn-sm btn-error btn-outline font-bold"
+                    >
                       Delete
                     </button>
                   </div>
