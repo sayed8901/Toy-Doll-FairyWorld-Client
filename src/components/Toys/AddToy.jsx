@@ -2,19 +2,17 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 const AddToy = () => {
+  const [toysData, setToysData] = useState([]);
 
-    const [toysData, setToysData] = useState([]);
+  useEffect(() => {
+    fetch("https://doll-fairyworld-server.vercel.app/toys")
+      .then((res) => res.json())
+      .then((data) => setToysData(data));
+  }, []);
 
-    useEffect(() => {
-      fetch("https://doll-fairyworld-server.vercel.app/toys")
-        .then((res) => res.json())
-        .then((data) => setToysData(data));
-    }, []);
-  
-    const uniqueCategories = [...new Set(toysData.map((toy) => toy.category))];
-    // console.log(uniqueCategories);
+  const uniqueCategories = [...new Set(toysData.map((toy) => toy.category))];
+  // console.log(uniqueCategories);
 
-  
   const handleAddToy = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -36,33 +34,30 @@ const AddToy = () => {
       picture,
       description,
       sellerName,
-      sellerEmail
+      sellerEmail,
     };
     // console.log(newToy);
 
     fetch("https://doll-fairyworld-server.vercel.app/toys", {
-        method: 'POST',
-        headers: {
-            'content-type': "application/json"
-        },
-        body: JSON.stringify(newToy)
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newToy),
     })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Yaa...hoo...!',
-                    text: 'New toy added successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Success!'
-                  })
-      
-            }
-        })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Yaa...hoo...!",
+            text: "New toy added successfully",
+            icon: "success",
+            confirmButtonText: "Success!",
+          });
+        }
+      });
   };
-
-
 
   return (
     <div>
@@ -92,11 +87,25 @@ const AddToy = () => {
               <label className="label">
                 <span className="label-text">Select Category</span>
               </label>
-              <select className="border-2 rounded-lg p-3" name="category" id="category" placeholder="add a category" required>
-                <option className="font-bold" value={uniqueCategories[0]}>{uniqueCategories[0]}</option>
-                <option className="font-bold" value={uniqueCategories[1]}>{uniqueCategories[1]}</option>
-                <option className="font-bold" value={uniqueCategories[2]}>{uniqueCategories[2]}</option>
-                <option className="font-bold" value={uniqueCategories[3]}>{uniqueCategories[3]}</option>
+              <select
+                className="border-2 rounded-lg p-3"
+                name="category"
+                id="category"
+                placeholder="add a category"
+                required
+              >
+                <option className="font-bold" value={uniqueCategories[0]}>
+                  {uniqueCategories[0]}
+                </option>
+                <option className="font-bold" value={uniqueCategories[1]}>
+                  {uniqueCategories[1]}
+                </option>
+                <option className="font-bold" value={uniqueCategories[2]}>
+                  {uniqueCategories[2]}
+                </option>
+                <option className="font-bold" value={uniqueCategories[3]}>
+                  {uniqueCategories[3]}
+                </option>
               </select>
             </div>
             <div className="form-control">

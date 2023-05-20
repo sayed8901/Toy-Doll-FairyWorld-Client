@@ -12,7 +12,7 @@ const MyToys = () => {
     fetch(`https://doll-fairyworld-server.vercel.app/myToys/${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyToysData(data));
-  }, [user]);
+  }, [user.email]);
   //   console.log(myToysData);
 
   return (
@@ -86,7 +86,11 @@ const MyToys = () => {
                 <td className="text-center">{toy?.availableQuantity}</td>
                 <td className="text-center">
                   <div className="flex gap-2">
-                    <UpdateToyModal toy={toy}></UpdateToyModal>
+                    <UpdateToyModal
+                      toy={toy}
+                      myToysData={myToysData}
+                      setMyToysData={setMyToysData}
+                    ></UpdateToyModal>
                     <button className="btn btn-sm btn-error btn-outline font-bold">
                       Delete
                     </button>
