@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
-import UpdateToyModal from "./UpdateToyModal";
 import Swal from "sweetalert2";
 import useTitle from "../../CustomHooks/useTitle";
 import { Link } from "react-router-dom";
+// import UpdateToyModal from "./UpdateToyModal";
 
 
 const MyToys = () => {
@@ -20,9 +20,6 @@ const MyToys = () => {
   }, [user.email]);
   //   console.log(myToysData);
 
-  const handleUpdate = (toy) => {
-    console.log(toy);
-  };
 
   const handleDelete = (id) => {
     console.log(id);

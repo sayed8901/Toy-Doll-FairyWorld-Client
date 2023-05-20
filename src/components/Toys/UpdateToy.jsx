@@ -54,7 +54,7 @@ const UpdateToy = () => {
     <div>
       <form
         onSubmit={handleUpdateToy}
-        className="card-body w-full sm:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] mx-auto"
+        className="card-body w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[40%] mx-auto"
       >
         <h2 className="text-2xl font-bold text-center mb-2">
           Update Information for: <br /> <span className="text-gradient text-3xl">{toyData?.toyName}</span>
