@@ -6,18 +6,28 @@ This is a toy web site where you can find most cutest & lovely toy dolls of vari
 
 Features of this web-site:
 
-* You can find our master chefs in "Chef" section. you can also check out their recipes by clicking onto the "view recipes" button & if you want, you can add to favorite any recipe just tapping on the "favorite" button.
+* Welcome to Fairy World! Here you can find most lovely toys of your dream. Welcome to the world of a vast collection of variety of toys that you are looking for. Hope you will get pleasure discovering our toys collection.
 
-* In "Our services" section, you can see our currently offerings & available services 
 
-* If you want, you can contact with us anytime without any hesitation. you can find more contact options in "Contact us" section.
+* You will find our cute dolls collection in "Gallery" section. you can also check out their details information by clicking onto the "View Details" button but you have to log in first to view the details info of the toy.
 
-* If you want more to explore, you can check out "Blog" section. Here you can find some conceptual writings regarding basic & some intermediate ReactJS topics.
 
-* Anyway, in order to view or go to the Chef Recipe page, you need to "log in". If you are new to our site, check out the "Register Now" button. However, you can also log in with your "Google" or "GutHub" account.
+* You can check out your desired toy based on various category from our "Shop by Category" section.
 
-* Here, firebase is used for authentication management. It s easy & more user friendly. Anyway, if you have any difficulty regarding security issue, you can contact with us.
+* You can also check out our "Latest Offerings" for recent activities and available offerings. 
 
+
+* You can view all the toy dolls in a tabular form at "All Toy" section. If you want, you can add a new toy frm "Add a toy" section. 
+
+* Later on, you can find the toys data only added by the current user at "My toys"  section. You can also update or delete the toy data. But be noted that, "Add Toy", "My Toy" section and "Update a toy data" & "Delete a toy" action will be available if only any user is logged in.
+
+
+* If you want more to explore, you can check out "Blog" section. Here you can find some conceptual writings regarding Some basic concepts about server & database.
+
+
+* You can "log in" by "registering" with email address & password. You can also log in with your "Google" or "GutHub" authentication.
+
+* Here, firebase is used for authentication management. It s easy & more user friendly. Anyway, if you face any issues regarding security concern, you can contact with us.
 
 
 
@@ -32,6 +42,14 @@ https://doll-fairy-world-react-crud.web.app/
 
 
 
+GitHub Repository Links: 
+
+Client-side repo link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-sayed8901
+
+
+Server-side repo link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-sayed8901
+
+
 
 
 Extra info:
@@ -40,12 +58,3 @@ Extra info:
 Server-side links:
 
 All  chef data server link: https://doll-fairyworld-server.vercel.app/
-
-
-
-
-GitHub Repository Links: 
-
-Client-side repo link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-sayed8901
-
-Server-side repo link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-sayed8901
