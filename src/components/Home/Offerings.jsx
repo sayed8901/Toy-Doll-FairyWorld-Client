@@ -13,9 +13,9 @@ const Offerings = () => {
         </p>
       </div>
 
-      <div className="sm:flex gap-8 justify-center">
+      <div className="sm:flex sm:gap-8 justify-center">
         {/* card 1 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card sm:w-96 bg-base-100 shadow-xl mb-8 sm:mb-0">
           <div className="card-body">
             <h2 className="card-title text-gradient text-2xl">Latest Collection</h2>
             <p>
@@ -29,7 +29,7 @@ const Offerings = () => {
         </div>
 
         {/* card 2 */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card sm:w-96 bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title text-gradient text-2xl">Subscription packages</h2>
             <p>

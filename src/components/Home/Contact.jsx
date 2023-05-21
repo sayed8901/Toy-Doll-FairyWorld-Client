@@ -15,7 +15,7 @@ const Contact = () => {
 
       <div className="sm:flex gap-8 justify-center">
         {/* card 1 */}
-        <div className="card w-96 bg-base-100 shadow-xl image-full glass">
+        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass mb-8 sm:mb-0">
           <figure>
             <img
               src={`https://media.istockphoto.com/id/1412566249/photo/christmas-details-of-festive-interior-for-little-princess-girl-decorating-living-room-soft.jpg?b=1&s=170667a&w=0&k=20&c=pxVNgcChYZX2E_ev38YTCjpZBov3GhFXiQFjVSeAuLI=`}
@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
 
         {/* card 2 */}
-        <div className="card w-96 bg-base-100 shadow-xl image-full glass">
+        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass">
           <figure>
             <img
               src={`https://media.istockphoto.com/id/466123671/photo/little-girls-bed.jpg?b=1&s=170667a&w=0&k=20&c=4Mstv2xUHVDzE_xGlii4I-jfWUXmSM5hTiwqb4Ivhtk=`}
