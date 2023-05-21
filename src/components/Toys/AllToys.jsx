@@ -90,7 +90,7 @@ const AllToys = () => {
             {/* table row */}
             {toysData.map((toy, index) => (
               <tr className="hover" key={toy._id}>
-                <th className="text-center">{index + 1}</th>
+                <td className="text-center">{index + 1}</td>
                 <td>
                   {toy?.sellerName}
                   <br />
