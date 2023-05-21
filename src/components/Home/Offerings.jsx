@@ -40,7 +40,7 @@ const Offerings = () => {
                 <button className="btn btn-primary">Monthly</button>
               </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Monthly</button>
+                <button className="btn btn-primary">Yearly</button>
               </div>
             </div>
           </div>

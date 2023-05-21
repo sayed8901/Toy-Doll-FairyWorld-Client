@@ -50,7 +50,7 @@ const Footer = () => {
         <p className="footer-title mx-auto mb-2">Contact</p>
         <div className="text-center text-sm sm:text-base lg:text-xl">
           <b>29, West Panthapath, Dhaka</b> <br />
-          <p>sayed@mssbd.org</p> <br />
+          <p>sayed@mssbd.org</p>
           <p>01730024046</p>
         </div>
       </div>
