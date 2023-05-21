@@ -4,6 +4,8 @@ import "react-tabs/style/react-tabs.css";
 import ToyCard from "./ToyCard";
 
 const ToyByCategory = () => {
+
+  // Getting all the toys data using fetch
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {
@@ -12,8 +14,9 @@ const ToyByCategory = () => {
       .then((data) => setToysData(data));
   }, []);
 
+  // extract the unique category names from the "toysData" array
   const uniqueCategories = [...new Set(toysData.map((toy) => toy.category))];
-//   console.log(uniqueCategories);
+  // console.log(uniqueCategories);
 
   return (
     <div className="my-32">

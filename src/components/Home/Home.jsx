@@ -7,6 +7,8 @@ import Offerings from "./Offerings";
 import ToyByCategory from "./ToyByCategory";
 
 
+// N.B.: The routes below wrapped with <AnimatedSection> to show AOS effect.
+
 const Home = () => {
     useTitle('Home')
     return (

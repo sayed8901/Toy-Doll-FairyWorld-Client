@@ -74,7 +74,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
 
-  //   to pass the data
+  //   to pass the data for further re-using purpose
   const AuthInfo = {
     user,
     loading,
@@ -88,6 +88,7 @@ const AuthProvider = ({ children }) => {
     logOut,
   };
 
+  // providing " AuthInfo " data to its all children components
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
   );

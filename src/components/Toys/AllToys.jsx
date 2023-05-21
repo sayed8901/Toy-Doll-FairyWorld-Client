@@ -9,6 +9,7 @@ const AllToys = () => {
   const { user } = useContext(AuthContext);
   const [toysData, setToysData] = useState([]);
 
+  // getting all toys data via fetching
   useEffect(() => {
     fetch("https://doll-fairyworld-server.vercel.app/toys")
       .then((res) => res.json())
@@ -16,6 +17,7 @@ const AllToys = () => {
   }, []);
 
   const handleSingleToyDetailsView = () => {
+    // to show an alert if there found no user while trying to view toy details information
     if (!user) {
       Swal.fire({
         title: "Warning!",
@@ -33,6 +35,7 @@ const AllToys = () => {
     const searchText = event.target.searchText.value;
     console.log(searchText);
 
+    // to search using MongoDB Indexing API
     fetch(`https://doll-fairyworld-server.vercel.app/toySearchByToyNameOrCategory/${searchText}`)
       .then((res) => res.json())
       .then((data) => setToysData(data));
@@ -69,7 +72,7 @@ const AllToys = () => {
 
       <div className="overflow-x-auto w-full">
         <table className="table w-full mt-4 mb-12">
-          {/* head */}
+          {/* table head */}
           <thead>
             <tr>
               <th className="text-center">SL</th>
@@ -86,6 +89,7 @@ const AllToys = () => {
               <th className="text-center">Details</th>
             </tr>
           </thead>
+          
           <tbody>
             {/* table row */}
             {toysData.map((toy, index) => (

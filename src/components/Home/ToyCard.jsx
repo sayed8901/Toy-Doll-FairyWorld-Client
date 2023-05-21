@@ -10,6 +10,7 @@ const ToyCard = ({ category }) => {
   const { user } = useContext(AuthContext);
   const [toysData, setToysData] = useState([]);
 
+  // getting toys data based on category
   useEffect(() => {
     fetch(`https://doll-fairyworld-server.vercel.app/toys/${category}`)
       .then((res) => res.json())
@@ -18,6 +19,7 @@ const ToyCard = ({ category }) => {
   //   console.log(toysData);
 
   const handleSingleToyDetailsView = () => {
+    // to show an alert if there found no user while trying to view toy details information
     if (!user) {
       Swal.fire({
         title: "Warning!",
@@ -43,6 +45,8 @@ const ToyCard = ({ category }) => {
             <h2 className="card-title mb-8">{toy.toyName}</h2>
             <p>Price: {toy.price}</p>
             <p>Rating: {toy.rating}</p>
+
+            {/* to show details information of a toy */}
             <div className="card-actions justify-end">
               <Link
                 onClick={() => handleSingleToyDetailsView(toy._id)}

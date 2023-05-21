@@ -8,6 +8,7 @@ const PrivateRoute = ({ children }) => {
 
   const location = useLocation();
 
+  // to show a loader-spinner in loading state
   if (loading) {
     return (
       <div
@@ -27,9 +28,14 @@ const PrivateRoute = ({ children }) => {
       </div>
     );
   }
+
+  // Only showing the child components only if there a user is logged in. 
+
+  // If not, s/he will be redirected to log in route. N.B.: While sending, it will carry the current path using " state={{ from: location }} "
   if (user) {
     return children;
-  } else {
+  } 
+  else {
     return (
       <Navigate
         to={"/login"}

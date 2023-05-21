@@ -30,7 +30,7 @@ const Blogs = () => {
       {/* question # 1 */}
       <AnimatedSection>
         <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
-          <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
+          <h3 className="text-xl font-bold mb-4 border-b-2 pb-3 border-slate-100">
             A. What is an access token and refresh token? How do they work and
             where should we store them on the client-side?
           </h3>
@@ -72,8 +72,8 @@ const Blogs = () => {
       {/* question # 2 */}
       <AnimatedSection>
         <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
-          <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
-            B. Compare SQL and NoSQL databases?
+          <h3 className="text-xl font-bold mb-4 border-b-2 pb-3 border-slate-100">
+            B. Comparison between SQL and NoSQL databases.
           </h3>
           <p className="px-8">
           Structured query language (SQL) databases are primarily called RDBMS
@@ -107,7 +107,7 @@ const Blogs = () => {
       {/* question # 3 */}
       <AnimatedSection>
         <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
-          <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
+          <h3 className="text-xl font-bold mb-4 border-b-2 pb-3 border-slate-100">
             C. What is express js? What is Nest JS?
           </h3>
           <p className="px-8">
@@ -131,7 +131,7 @@ const Blogs = () => {
       {/* question # 4 */}
       <AnimatedSection>
         <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
-          <h3 className="font-bold mb-4 border-b-2 pb-3 border-slate-100">
+          <h3 className="text-xl font-bold mb-4 border-b-2 pb-3 border-slate-100">
             D. What is MongoDB aggregate and how does it work?
           </h3>
           <p className="px-8">

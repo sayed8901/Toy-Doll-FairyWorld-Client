@@ -5,6 +5,7 @@ const SingleToyDetailsCard = () => {
   const { id } = useParams();
   // console.log(id);
 
+  // to get a single toy data via fetching
   const [toy, setToy] = useState({});
   const navigate = useNavigate();
 
@@ -76,6 +77,7 @@ const SingleToyDetailsCard = () => {
         </div>
       </div>
 
+      {/* button to go back */}
       <div className="text-right mr-8 mb-12">
         <button onClick={() => {navigate(-1)}} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline bg-gradient text-white font-bold">
           Back to previous page

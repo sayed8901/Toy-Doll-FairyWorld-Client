@@ -6,12 +6,14 @@ const AddToy = () => {
   useTitle('Add a Toy')
   const [toysData, setToysData] = useState([]);
 
+  // getting all toys data via fetching
   useEffect(() => {
     fetch("https://doll-fairyworld-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToysData(data));
   }, []);
 
+  // extract the unique category names from the "toysData" array
   const uniqueCategories = [...new Set(toysData.map((toy) => toy.category))];
   // console.log(uniqueCategories);
 
@@ -40,6 +42,7 @@ const AddToy = () => {
     };
     // console.log(newToy);
 
+    // to send data to backend using "POST" method
     fetch("https://doll-fairyworld-server.vercel.app/toys", {
       method: "POST",
       headers: {
@@ -50,6 +53,7 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        // after successful data posting to MongoDB, showing a sweet alert info
         if (data.insertedId) {
           Swal.fire({
             title: "Yaa...hoo...!",
@@ -176,7 +180,7 @@ const AddToy = () => {
         </div>
 
         <div>
-          <h3 className="text-xl font-bold mt-12 mb-4">Seller Info:</h3>
+          <h3 className="text-xl font-bold mt-10 mb-4">Seller Info:</h3>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Seller Name</span>

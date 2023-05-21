@@ -6,8 +6,9 @@ import LazyLoad from "react-lazy-load";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  //   console.log(user);
+  // console.log(user);
 
+  // Creating NavBar Menu Items for further used below
   const navItems = (
     <>
       <li>
@@ -28,6 +29,9 @@ const Navbar = () => {
           All Toys
         </NavLink>
       </li>
+
+      {/* This will hide the private menu items if there is no current user found logged in. It is temporarily made inactive nut created if I want to apply it later on.. */}
+
       {/* {user && ( */}
         <>
           <li>
@@ -50,6 +54,7 @@ const Navbar = () => {
           </li>
         </>
       {/* )} */}
+
       <li>
         <NavLink
           to="/blogs"
@@ -107,7 +112,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal ml-8 px-1">{navItems}</ul>
       </div>
 
-      {/* to dynamically show user photo & name */}
+      {/* to dynamically show user photo & name and also to switch button action between "log in" or "log out" */}
       <div className="navbar-end">
         {user ? (
           <div className="flex gap-2 justify-center items-center">

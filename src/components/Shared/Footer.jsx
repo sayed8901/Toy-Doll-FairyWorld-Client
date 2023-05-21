@@ -17,20 +17,35 @@ const Footer = () => {
           </p>
         </div>
       </Link>
+
+      {/* social links */}
       <div className="space-y-4">
         <span className="footer-title mb-8">Get in touch</span>
         <div className="flex justify-evenly gap-4">
-          <a className="text-2xl">
+          <Link
+            to={`https://www.linkedin.com/in/md-sayed-hossain-24297315a`}
+            target="blank"
+            className="text-2xl"
+          >
             <FaLinkedin />
-          </a>
-          <a className="text-2xl">
+          </Link>
+          <Link
+            to={`https://www.facebook.com/profile.php?id=100010385951866`}
+            target="blank"
+            className="text-2xl"
+          >
             <FaFacebook />
-          </a>
-          <a className="text-2xl">
+          </Link>
+          <Link
+            to={`https://drive.google.com/drive/u/0/folders/1-pj_U8U_I9kPOYE4aFJ8vWX6w2Dbv4ka`}
+            target="blank"
+            className="text-2xl"
+          >
             <FaGoogleDrive />
-          </a>
+          </Link>
         </div>
       </div>
+      
       <div className="items-center">
         <p className="footer-title mx-auto mb-2">Contact</p>
         <div className="text-center text-sm sm:text-base lg:text-xl">

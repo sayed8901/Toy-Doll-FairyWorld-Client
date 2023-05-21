@@ -19,7 +19,7 @@ Features of this web-site:
 * We always welcoming to our guest, well-wishers & most importantly our enthusiastic kids. We are happy if you would have a look at our store at a convenient time to explore more excitement.
 
 
-* You can view all the toy dolls in a tabular form at "All Toy" section. If you want, you can add a new toy frm "Add a toy" section. 
+* You can view all the toy dolls in a tabular form at "All Toy" section. You can search a toy either by its name or its category. Besides this, if you want, you can add a new toy by fulling up a simple form at "Add a toy" section.
 
 * Later on, you can find the toys data only added by the current user at "My toys"  section. You can also update or delete the toy data. But be noted that, "Add Toy", "My Toy" section and "Update a toy data" & "Delete a toy" action will be available if only any user is logged in.
 
@@ -55,8 +55,6 @@ Server-side repo link: https://github.com/programming-hero-web-course-4/b7a11-to
 
 
 Extra info:
-
-
 Server-side links:
 
 All  chef data server link: https://doll-fairyworld-server.vercel.app/

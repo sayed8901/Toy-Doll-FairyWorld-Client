@@ -14,6 +14,7 @@ const Offerings = () => {
       </div>
 
       <div className="sm:flex gap-8 justify-center">
+        {/* card 1 */}
         <div className="card w-96 bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title text-gradient text-2xl">Latest Collection</h2>
@@ -26,6 +27,8 @@ const Offerings = () => {
             </div>
           </div>
         </div>
+
+        {/* card 2 */}
         <div className="card w-96 bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title text-gradient text-2xl">Subscription packages</h2>
@@ -48,3 +51,4 @@ const Offerings = () => {
 };
 
 export default Offerings;
+

@@ -6,6 +6,7 @@ const UpdateToy = () => {
   const { id } = useParams();
   //   console.log(id);
 
+  // to get the single toy data using fetch
   const navigate = useNavigate();
   const [toyData, setToyData] = useState([]);
   useEffect(() => {
@@ -24,6 +25,7 @@ const UpdateToy = () => {
     const updatedData = { price, availableQuantity, description };
     // console.log(updatedData);
 
+    // to send necessary data to MongoDB via "PUT" method
     fetch(`https://doll-fairyworld-server.vercel.app/toys/${toyData._id}`, {
       method: "PUT",
       headers: {
@@ -34,6 +36,7 @@ const UpdateToy = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        // after successful data updating, showing a sweet alert info
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Great...job...!",
@@ -42,6 +45,7 @@ const UpdateToy = () => {
             confirmButtonText: "Success!",
           });
         }
+
         // updating state
         // const remaining = myToysData.filter(toy => toy._id !== toyData._id);
         // const updated = myToysData.find(toy => toy._id === toyData._id);
@@ -118,16 +122,16 @@ const UpdateToy = () => {
           value="Update Toy"
         />
       </form>
+
+      {/* back btn */}
       <div className="text-right mr-8 mb-12">
             <button
-              onClick={() => {
-                navigate(-1);
-              }}
+              onClick={() => {navigate(-1)}}
               className="btn btn-sm btn-info btn-outline font-bold sm:mr-12"
             >
               Back to My All toys
             </button>
-          </div>;
+      </div>;
     </div>
   );
 };

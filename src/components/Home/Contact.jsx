@@ -14,6 +14,7 @@ const Contact = () => {
       </div>
 
       <div className="sm:flex gap-8 justify-center">
+        {/* card 1 */}
         <div className="card w-96 bg-base-100 shadow-xl image-full glass">
           <figure>
             <img
@@ -34,6 +35,7 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* card 2 */}
         <div className="card w-96 bg-base-100 shadow-xl image-full glass">
           <figure>
             <img
@@ -59,3 +61,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

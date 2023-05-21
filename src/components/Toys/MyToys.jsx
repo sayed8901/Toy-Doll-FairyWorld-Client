@@ -12,6 +12,7 @@ const MyToys = () => {
   //   console.log(user.email);
   const [myToysData, setMyToysData] = useState([]);
 
+  // to get toys data based on users email address
   useEffect(() => {
     // fetch(`https://doll-fairyworld-server-sayed8901.vercel.app/myToys/${user.email}`)
     fetch(`https://doll-fairyworld-server.vercel.app/myToys/${user.email}`)
@@ -21,10 +22,11 @@ const MyToys = () => {
   //   console.log(myToysData);
 
 
+  // to delete a toy data item
   const handleDelete = (id) => {
     console.log(id);
     Swal.fire({
-      title: "Are you sure?",
+      title: "Are you sure to delete?",
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
@@ -46,6 +48,7 @@ const MyToys = () => {
                 "success"
               );
 
+              // updating state after deleting a toy data
               const remaining = myToysData.filter((toy) => toy._id !== id);
               setMyToysData(remaining);
             }
@@ -68,7 +71,7 @@ const MyToys = () => {
 
       <div className="overflow-x-auto w-full">
         <table className="table w-full mt-4 mb-12">
-          {/* head */}
+          {/* table head */}
           <thead>
             <tr>
               <th className="text-center">SL</th>
@@ -126,16 +129,20 @@ const MyToys = () => {
                 <td className="text-center">{toy?.availableQuantity}</td>
                 <td className="text-center">
                   <div className="flex gap-2">
+                    {/* alternatively, to show updater form in a modal */}
+
                     {/* <UpdateToyModal
                       toy={toy}
                       myToysData={myToysData}
                       setMyToysData={setMyToysData}
                     ></UpdateToyModal> */}
+
+                    {/* btn to update action */}
                     <Link to={`/updateToy/${toy?._id}`} className="btn btn-sm bg-gradient text-white">Update</Link>
+
+                    {/* btn to delete action */}
                     <button
-                      onClick={() => {
-                        handleDelete(toy._id);
-                      }}
+                      onClick={() => {handleDelete(toy._id)}}
                       className="btn btn-sm btn-error btn-outline font-bold"
                     >
                       Delete
