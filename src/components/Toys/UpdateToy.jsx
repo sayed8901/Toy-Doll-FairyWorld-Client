@@ -123,7 +123,7 @@ const UpdateToy = () => {
               onClick={() => {
                 navigate(-1);
               }}
-              className="btn btn-sm btn-outline font-bold sm:mr-12"
+              className="btn btn-sm btn-info btn-outline font-bold sm:mr-12"
             >
               Back to My All toys
             </button>

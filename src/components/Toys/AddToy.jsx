@@ -90,7 +90,7 @@ const AddToy = () => {
                 <span className="label-text">Select Category</span>
               </label>
               <select
-                className="border-2 rounded-lg p-3"
+                className="border-2 rounded-lg p-3 bg-transparent"
                 name="category"
                 id="category"
                 placeholder="add a category"

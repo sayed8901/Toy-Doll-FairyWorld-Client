@@ -11,10 +11,12 @@ Features of this web-site:
 
 * You will find our cute dolls collection in "Gallery" section. you can also check out their details information by clicking onto the "View Details" button but you have to log in first to view the details info of the toy.
 
-
 * You can check out your desired toy based on various category from our "Shop by Category" section.
 
+
 * You can also check out our "Latest Offerings" for recent activities and available offerings. 
+
+* We always welcoming to our guest, well-wishers & most importantly our enthusiastic kids. We are happy if you would have a look at our store at a convenient time to explore more excitement.
 
 
 * You can view all the toy dolls in a tabular form at "All Toy" section. If you want, you can add a new toy frm "Add a toy" section. 

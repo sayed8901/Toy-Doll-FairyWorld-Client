@@ -123,7 +123,7 @@ const AllToys = () => {
                     onClick={() => handleSingleToyDetailsView(toy._id)}
                     to={`/toy/${toy._id}`}
                   >
-                    <button className="btn btn-sm btn-primary btn-outline">
+                    <button className="btn btn-sm btn-info btn-outline">
                       View Details
                     </button>
                   </Link>

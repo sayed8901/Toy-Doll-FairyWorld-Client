@@ -131,7 +131,7 @@ const MyToys = () => {
                       myToysData={myToysData}
                       setMyToysData={setMyToysData}
                     ></UpdateToyModal> */}
-                    <Link to={`/updateToy/${toy?._id}`} className="btn btn-sm bg-gradient">Update</Link>
+                    <Link to={`/updateToy/${toy?._id}`} className="btn btn-sm bg-gradient text-white">Update</Link>
                     <button
                       onClick={() => {
                         handleDelete(toy._id);
