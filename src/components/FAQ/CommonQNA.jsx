@@ -40,7 +40,7 @@ const CommonQNA = () => {
         <AnimatedSection key={id}>
           <div className="border border-slate-200 rounded-md p-4 mb-8 md:mb-12">
             <h3 className="text-xl font-bold mb-4 border-b-2 pb-3 border-slate-100">
-              {question}
+              {id}. {question}
             </h3>
             <p className="px-2 sm:px-8 text-justify">{answer}</p>
           </div>

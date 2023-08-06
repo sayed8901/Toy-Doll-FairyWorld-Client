@@ -22,7 +22,7 @@ const Gallery = () => {
       </h2>
 
       {/* Showing images in a sliding card using "Marquee" package */}
-      <Marquee speed={250} pauseOnHover={true}>
+      <Marquee speed={250} pauseOnHover={true} loop={0} gradient={true}>
         {toysData.map((toy) => (
           <div key={toy._id} className="card glass mr-12">
             <figure>
