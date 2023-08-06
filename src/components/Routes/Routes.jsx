@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import SingleToyDetailsCard from "../Toys/SingleToyDetailsCard";
 import AnimatedSection from "../AOS-Animate/AnimatedSection";
 import UpdateToy from "../Toys/UpdateToy";
+import CommonQNA from "../FAQ/CommonQNA";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,14 @@ const router = createBrowserRouter([
         element: (
           <AnimatedSection>
             <Blogs></Blogs>
+          </AnimatedSection>
+        ),
+      },
+      {
+        path: "/FAQ",
+        element: (
+          <AnimatedSection>
+            <CommonQNA></CommonQNA>
           </AnimatedSection>
         ),
       },

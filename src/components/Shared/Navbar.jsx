@@ -57,11 +57,11 @@ const Navbar = () => {
 
       <li>
         <NavLink
-          to="/blogs"
+          to="/FAQ"
           className={`mb-3 lg:mb-0 mx-1 ${({ isActive }) =>
             isActive ? "active" : ""}`}
         >
-          Blogs
+          FAQs
         </NavLink>
       </li>
     </>

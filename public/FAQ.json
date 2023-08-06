@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What types of dolls do you offer?",
+    "answer": "We offer a diverse range of dolls to suit different preferences. Our collection includes fashion dolls that come with stylish outfits and accessories, adorable baby dolls that promote nurturing play, interactive dolls that respond to touch and voice, and collectible dolls for enthusiasts. Explore our website to discover the variety we have to offer and find the perfect doll that resonates with you or your child's interests."
+  },
+  {
+    "id": 2,
+    "question": "Are these dolls safe for all ages?",
+    "answer": "Yes, our dolls are designed with safety in mind. We provide clear age recommendations for each doll to ensure safe and appropriate play. It's important to follow these guidelines to ensure that the doll is suitable for your child's age and developmental stage. Additionally, our dolls undergo rigorous safety testing to meet industry standards, so you can have confidence in their quality and safety."
+  },
+  {
+    "id": 3,
+    "question": "Can I customize or personalize a doll?",
+    "answer": "Some of our dolls offer customization options, allowing you to create a one-of-a-kind doll that reflects your unique preferences. Look for dolls labeled as 'personalizable' or 'customizable.' These dolls may come with features such as interchangeable outfits, hairstyles, and accessories. Customizing a doll can make it a special and meaningful gift, and it's a wonderful way to encourage creativity and self-expression in play."
+  },
+  {
+    "id": 4,
+    "question": "Do you offer doll accessories and clothing?",
+    "answer": "Absolutely! We have a delightful range of doll accessories and clothing sets that can enhance your doll's play experience. From stylish outfits and shoes to miniature furniture and playsets, our accessories are designed to spark imaginative play scenarios. Dress up your doll for different occasions, create themed adventures, and explore a world of imaginative possibilities with our accessory collection."
+  },
+  {
+    "id": 5,
+    "question": "How do I care for and clean my doll?",
+    "answer": "Caring for your doll will help prolong its lifespan and keep it looking its best. For general cleaning, use a soft damp cloth to wipe the doll's surface. Avoid using harsh chemicals or submerging the doll in water, as this may damage its materials. If the doll has removable clothing, you can gently hand wash the clothing using mild detergent. Always refer to the care instructions provided with your doll for specific cleaning recommendations."
+  },
+  {
+    "id": 6,
+    "question": "Can I return or exchange a doll if I'm not satisfied?",
+    "answer": "Yes, we want you to be completely satisfied with your purchase. If you're not happy with your doll, you can take advantage of our hassle-free return and exchange policy. Please review our return policy for details on the timeframe and conditions for returns and exchanges. Your satisfaction is important to us, and we're here to assist you throughout the process."
+  },
+  {
+    "id": 7,
+    "question": "Are your dolls eco-friendly and sustainable?",
+    "answer": "We are committed to environmental responsibility. Many of our dolls are crafted using eco-friendly materials and sustainable production practices. We strive to minimize our carbon footprint and make choices that contribute to a healthier planet. When you choose our dolls, you're not only getting a high-quality toy, but you're also supporting eco-conscious initiatives that prioritize the well-being of our environment."
+  },
+  {
+    "id": 8,
+    "question": "Do you offer gift wrapping or packaging?",
+    "answer": "Yes, we offer convenient gift wrapping and personalized packaging options to make your doll purchase even more special. During the checkout process, you can select the gift wrapping option and include a personalized message. Our beautifully wrapped packages are perfect for birthdays, holidays, and other occasions. Make your gift-giving experience memorable with our thoughtful packaging."
+  },
+  {
+    "id": 9,
+    "question": "Can I track my order after purchase?",
+    "answer": "Absolutely! Once your order is processed and shipped, you will receive a confirmation email containing a tracking number. You can use this tracking number to monitor the status and location of your package as it makes its way to you. Tracking your order provides peace of mind and ensures that you stay informed about the delivery timeline."
+  },
+  {
+    "id": 10,
+    "question": "How can I contact your customer support for further assistance?",
+    "answer": "Our dedicated customer support team is here to assist you with any questions or concerns you may have. You can reach out to us through the contact form on our website, where you can provide details about your inquiry. Alternatively, you can send us an email or give us a call using the contact information provided. We are committed to providing excellent customer service and ensuring that your experience with our dolls is a positive one."
+  }
+]
