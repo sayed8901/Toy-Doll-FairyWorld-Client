@@ -3,7 +3,7 @@ import LazyLoad from "react-lazy-load";
 
 const BrandPartners = () => {
     return (
-      <div className="my-16">
+      <div className="mt-16 mb-32">
         <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16">
           Our Proud <span className="text-gradient">Brand Partners</span>
         </h2>

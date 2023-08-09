@@ -5,6 +5,7 @@ import BrandPartners from "./BrandPartners";
 import Contact from "./Contact";
 import Gallery from "./Gallery";
 import Offerings from "./Offerings";
+import Stats from "./Stats";
 import ToyByCategory from "./ToyByCategory";
 
 // N.B.: The routes below wrapped with <AnimatedSection> to show AOS effect.
@@ -23,13 +24,16 @@ const Home = () => {
         <ToyByCategory></ToyByCategory>
       </AnimatedSection>
       <AnimatedSection>
+        <BrandPartners></BrandPartners>
+      </AnimatedSection>
+      <AnimatedSection>
+        <Stats></Stats>
+      </AnimatedSection>
+      <AnimatedSection>
         <Offerings></Offerings>
       </AnimatedSection>
       <AnimatedSection>
         <Contact></Contact>
-      </AnimatedSection>
-      <AnimatedSection>
-        <BrandPartners></BrandPartners>
       </AnimatedSection>
     </div>
   );

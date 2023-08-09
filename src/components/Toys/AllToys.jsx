@@ -58,7 +58,7 @@ const AllToys = () => {
           <input
             type="text"
             name="searchText"
-            placeholder="Type Toy Name/ Category"
+            placeholder="i.e: Cutie    or,    Baby Dolls"
             className="input input-bordered w-full max-w-lg"
             required
           />
