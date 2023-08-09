@@ -25,21 +25,21 @@ const Footer = () => {
           <Link
             to={`https://www.linkedin.com/in/md-sayed-hossain-24297315a`}
             target="blank"
-            className="text-2xl"
+            className="text-2xl group hover:scale-150 duration-300"
           >
             <FaLinkedin />
           </Link>
           <Link
             to={`https://www.facebook.com/profile.php?id=100010385951866`}
             target="blank"
-            className="text-2xl"
+            className="text-2xl group hover:scale-150 duration-300"
           >
             <FaFacebook />
           </Link>
           <Link
             to={`https://drive.google.com/drive/u/0/folders/1-pj_U8U_I9kPOYE4aFJ8vWX6w2Dbv4ka`}
             target="blank"
-            className="text-2xl"
+            className="text-2xl group hover:scale-150 duration-300"
           >
             <FaGoogleDrive />
           </Link>

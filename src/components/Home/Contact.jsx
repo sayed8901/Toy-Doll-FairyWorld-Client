@@ -15,7 +15,7 @@ const Contact = () => {
 
       <div className="sm:flex gap-8 justify-center">
         {/* card 1 */}
-        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass mb-8 sm:mb-0">
+        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass mb-8 sm:mb-0 group hover:scale-110 duration-500">
           <figure>
             <img
               src={`https://media.istockphoto.com/id/1412566249/photo/christmas-details-of-festive-interior-for-little-princess-girl-decorating-living-room-soft.jpg?b=1&s=170667a&w=0&k=20&c=pxVNgcChYZX2E_ev38YTCjpZBov3GhFXiQFjVSeAuLI=`}
@@ -23,7 +23,7 @@ const Contact = () => {
             />
           </figure>
           <div className="card-body">
-          <h2 className="text-3xl mb-4 text-center">
+            <h2 className="text-3xl mb-4 text-center">
               <span className="font-extrabold">Basundhara</span> Outlet
             </h2>
             <p className="text-xl font-bold">29, West Pathapath, Dhaka-1205</p>
@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
 
         {/* card 2 */}
-        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass">
+        <div className="card sm:w-96 bg-base-100 shadow-xl image-full glass group hover:scale-110 duration-500">
           <figure>
             <img
               src={`https://media.istockphoto.com/id/466123671/photo/little-girls-bed.jpg?b=1&s=170667a&w=0&k=20&c=4Mstv2xUHVDzE_xGlii4I-jfWUXmSM5hTiwqb4Ivhtk=`}

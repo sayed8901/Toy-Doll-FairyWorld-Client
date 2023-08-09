@@ -33,7 +33,7 @@ const ToyCard = ({ category }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 my-8">
       {toysData.map((toy) => (
-        <div key={toy._id} className="card card-side bg-base-100 shadow-xl glass">
+        <div key={toy._id} className="card card-side bg-base-100 shadow-xl glass group hover:scale-110 duration-300">
           <figure className="px-4 mx-auto">
             <img
               className="rounded-xl h-48 lg:h-64 xl:h-72"
