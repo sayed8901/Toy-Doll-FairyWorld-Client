@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import Marquee from "react-fast-marquee";
 import LazyLoad from "react-lazy-load";
 
@@ -17,22 +18,25 @@ const Gallery = () => {
 
   return (
     <div className="my-16">
-      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16">
-        Our Exclusive <span className="text-gradient">Doll Gallery</span>
-      </h2>
+      <Slide>
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16">
+          Our Exclusive <span className="text-gradient">Doll Gallery</span>
+        </h2>
+      </Slide>
 
       {/* Showing images in a sliding card using "Marquee" package */}
-      <Marquee speed={250} pauseOnHover={true} loop={0} gradient={true}>
+      <Marquee speed={150} pauseOnHover={true} loop={0} className="overflow-y-hidden">
         {toysData.map((toy) => (
-          <div key={toy._id} className="card glass mr-12">
+          <div
+            key={toy._id}
+            className="card glass mr-12 group hover:scale-110 duration-300 "
+          >
             <figure>
-              <LazyLoad>
                 <img
                   className="h-48 lg:h-64 xl:h-72 rounded-2xl"
                   src={toy?.picture}
                   alt="car!"
                 />
-              </LazyLoad>
             </figure>
             <LazyLoad>
               <div className="card-body">

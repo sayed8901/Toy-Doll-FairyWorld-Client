@@ -1,7 +1,9 @@
+import { Slide } from "react-awesome-reveal";
+
 const Contact = () => {
   return (
     <div className="mb-28">
-      <div>
+      <Slide>
         <h2 className="text-2xl lg:text-3xl font-bold text-center mt-32 mb-8">
           <span className="text-gradient">Visit</span> us
         </h2>
@@ -11,7 +13,7 @@ const Contact = () => {
           <br /> <br /> We will be so happy & grateful if you would have a look
           at our store at a convenient time to explore more excitement.
         </p>
-      </div>
+      </Slide>
 
       <div className="sm:flex gap-8 justify-center">
         {/* card 1 */}

@@ -1,18 +1,23 @@
+import { Slide } from "react-awesome-reveal";
+
 const BannerSlider = () => {
   return (
     <div>
       <div className="hero">
         <div className="hero-content text-center">
           <div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-center mt-16 mb-8">
-              Welcome to <span className="text-gradient">Fairy World!</span>
-            </h2>
-            <p className="py-6">
-              Here you can find most lovely toys of your dream. Welcome to the
-              world of a vast collection of variety of toys that you are looking
-              for.
-            </p>
-            <p>Hope you will get pleasure discovering our toys collection.</p>
+            <Slide>
+              {" "}
+              <h2 className="text-2xl lg:text-3xl font-bold text-center mt-16 mb-8">
+                Welcome to <span className="text-gradient">Fairy World!</span>
+              </h2>
+              <p className="py-6">
+                Here you can find most lovely toys of your dream. Welcome to the
+                world of a vast collection of variety of toys that you are
+                looking for.
+              </p>
+              <p>Hope you will get pleasure discovering our toys collection.</p>
+            </Slide>
             <br />
 
             <div className="my-8 carousel w-full">
@@ -23,9 +28,9 @@ const BannerSlider = () => {
                   className="w-full rounded-3xl"
                 />
 
-              {/* to overlay text at 1st slide */}
+                {/* to overlay text at 1st slide */}
                 <div className="absolute right-5 bottom-5 sm:bottom-16 md:bottom-24 lg:bottom-48 xl:bottom-1/2 text-gradient ">
-                  <div className="w-1/2 lg:w-2/3 2xl:w-full ml-auto">
+                  <div className="w-1/2 lg:w-2/3 2xl:w-4/5 ml-auto">
                     <h1 className="mb-2 sm:mb-8 font-bold text-2xl lg:text-3xl xl:text-4xl">
                       Welcome Dear..
                     </h1>
